@@ -11,15 +11,16 @@ def password_cracker(password):
             if permutation == password:
                 print(f"Password {password} guessed in {attempts} attempts")
                 return
-start = time.time()
+            else:
+                print("Failure")
 
-passwords = []
-with open("Passwords.txt", 'r') as file:
-    for line in file:
-        passwords.append(line.strip())
 
-for password in passwords:
-    password_cracker(password)
+def crack():
+    passwords = []
+    with open("Passwords.txt", 'r') as file:
+        for line in file:
+            passwords.append(line.strip())
 
-end = time.time()
-print(end - start)
+    for password in passwords:
+        password_cracker(password)
+crack()
