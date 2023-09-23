@@ -21,6 +21,9 @@ def crack():
             passwords.append(line.strip())
 
     for password in passwords:
+        start = time.time()
         password_cracker(password)
+        end = time.time()
+        print(end - start)
 
 crack()
