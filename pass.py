@@ -11,8 +11,7 @@ def password_cracker(password):
             if permutation == password:
                 print(f"Password {password} guessed in {attempts} attempts")
                 return
-            else:
-                print("Failure")
+    print("Failure")
 
 
 def crack():
@@ -23,4 +22,5 @@ def crack():
 
     for password in passwords:
         password_cracker(password)
+
 crack()
