@@ -1,6 +1,8 @@
 import string, itertools, time
 
 def password_cracker(password):
+    #function creates every single possible password permutation 
+    #until it lands on the correct one
     characters = string.ascii_letters + string.digits + "!@#$%^&*()-_=+[]{}|;:\",.<>/?`~\\"
     attempts = 0
     
@@ -15,6 +17,8 @@ def password_cracker(password):
 
 
 def crack():
+    #function reads input from a .txt file and generates passwords using
+    #password_cracker() until it lands on the correct one
     passwords = []
     with open("Passwords.txt", 'r') as file:
         for line in file:
